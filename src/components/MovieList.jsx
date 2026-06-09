@@ -6,6 +6,11 @@ export default function MovieList() {
   const [movies, setMovies] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [favoriteMovie, setFavoriteMovie] = useState(() => {
+    const saved = localStorage.getItem("favoriteMovie")
+    return saved ? JSON.parse(saved) : null
+  }
+  );
 
   useEffect(() => {
     async function fetchMovies() {
@@ -32,15 +37,35 @@ export default function MovieList() {
     fetchMovies()
   }, []);
 
+  function saveFavorite(movie) {
+    localStorage.setItem("favoriteMovie", JSON.stringify(movie));
+    setFavoriteMovie(movie);
+  }
+
+  function removeFavorite() {
+    localStorage.removeItem("favoriteMovie");
+    setFavoriteMovie(null);
+  }
+
   if (loading) return <p>Loading...</p>
   if (error) return <p>There was an issue fetching your data: {error.message}</p>
 
   return (
     <div>
       <h1>Popular Movies</h1>
+
+      {favoriteMovie && (
+              <div>
+                <h2>Current Favorite: {favoriteMovie.title}</h2>
+                <p>{favoriteMovie.overview}</p>
+                <button onClick={removeFavorite}>Remove Favorite</button>
+              </div>
+            )}
+
       {movies.map((movie) => (
         <div key={movie.id}>
           <h2>{movie.title}</h2>
+          <button onClick={() => saveFavorite(movie)}>Save as Favorite</button>
         </div>
       ))}
     </div>

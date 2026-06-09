@@ -54,6 +54,10 @@ body {
   margin: 0;
 }
 
+.card, .card-body {
+  border-radius: 0 !important;
+}
+
 #root {
   width: 1126px;
   max-width: 100%;

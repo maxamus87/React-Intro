@@ -13,7 +13,7 @@ export default function RandomActivity() {
         setLoading(true);
         setError(null);
         try {
-            const response = await fetch("https://bored-api.appbrewery.com/random");
+            const response = await fetch("https://official-joke-api.appspot.com/random_joke");
 
             if (!response.ok) {
                 throw new Error("Failed to fetch activity");
@@ -34,10 +34,9 @@ export default function RandomActivity() {
 
         return (
             <div>
-                <h1>Random Activity</h1>
-                <p>Activity: {activity.activity}</p>
-                <p>Type: {activity.type}</p>
-                <p>Participants: {activity.participants}</p>
+                <h1>Random Joke</h1>
+                <p>Setup: {activity.setup}</p>
+                <p>Punchline: {activity.punchline}</p>
                 <button onClick = {fetchActivity}>New Activity</button>
             </div>
         );

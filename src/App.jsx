@@ -14,7 +14,34 @@
 // import MovieList from "./components/MovieList";
 // import MovieSearch from "./components/MovieSearch";
 // import RandomDogImage from "./components/RandomDogImage";
-import RandomActivity from "./components/RandomActivity";
+// import RandomActivity from "./components/RandomActivity";
+// import FavoriteMovie from "./components/FavoriteMovie";
+// import CatFact from "./components/CatFact"
+// import { getCheckoutCart } from "./components/lib/eCommerceBusinessLogic";
+// import { calculateTotal } from "./components/lib/eCommerceBusinessLogic";
+// import { getVerifiedusers } from "./components/lib/eCommerceBusinessLogic"
+// import Shows from "./components/Shows";
+// import GradeDashboard from "./components/GradeDashboard";
+import RentalDashboard from "./components/RentalDashboard";
+
+
+
+// const users = [
+//   { name: "Alex", membershipTier: "gold", totalSpend: 1200, isVerified: true },
+//   { name: "Jordan", membershipTier: "silver", totalSpend: 450, isVerified: true },
+//   { name: "Sam", membershipTier: "none", totalSpend: 80, isVerified: false },
+//   { name: "Taylor", membershipTier: "gold", totalSpend: 3200, isVerified: true },
+//   { name: "Morgan", membershipTier: "silver", totalSpend: 290, isVerified: false }
+// ];
+
+// const cart = [
+//   { name: "Laptop", price: 999, quantity: 1, inStock: true },
+//   { name: "Mouse", price: 29, quantity: 2, inStock: true },
+//   { name: "Monitor", price: 349, quantity: 1, inStock: false },
+//   { name: "Keyboard", price: 79, quantity: 1, inStock: true }
+// ];
+
+// console.log
 
 export default function App() {
   return (
@@ -35,7 +62,16 @@ export default function App() {
       {/* <MovieList /> */}
       {/* <MovieSearch /> */}
       {/* <RandomDogImage /> */}
-      <RandomActivity />
+      {/* // <RandomActivity /> */}
+      {/* <FavoriteMovie /> */}
+      {/* <CatFact /> */}
+      {/* <getCheckoutCart /> */}
+      {/* <calculateTotal /> */}
+      {/* <getVerifiedusers /> */}
+       {/* <Shows /> */}
+       {/* <GradeDashboard /> */}
+       <RentalDashboard />
+
     </div>
   );
 }
