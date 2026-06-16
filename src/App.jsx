@@ -14,7 +14,7 @@
 // import MovieList from "./components/MovieList";
 // import MovieSearch from "./components/MovieSearch";
 // import RandomDogImage from "./components/RandomDogImage";
-// import RandomActivity from "./components/RandomActivity";
+import RandomJoke from "./components/RandomJoke";
 // import FavoriteMovie from "./components/FavoriteMovie";
 // import CatFact from "./components/CatFact"
 // import { getCheckoutCart } from "./components/lib/eCommerceBusinessLogic";
@@ -22,7 +22,7 @@
 // import { getVerifiedusers } from "./components/lib/eCommerceBusinessLogic"
 // import Shows from "./components/Shows";
 // import GradeDashboard from "./components/GradeDashboard";
-import RentalDashboard from "./components/RentalDashboard";
+// import RentalDashboard from "./components/RentalDashboard";
 
 
 
@@ -62,7 +62,7 @@ export default function App() {
       {/* <MovieList /> */}
       {/* <MovieSearch /> */}
       {/* <RandomDogImage /> */}
-      {/* // <RandomActivity /> */}
+       <RandomJoke />
       {/* <FavoriteMovie /> */}
       {/* <CatFact /> */}
       {/* <getCheckoutCart /> */}
@@ -70,7 +70,7 @@ export default function App() {
       {/* <getVerifiedusers /> */}
        {/* <Shows /> */}
        {/* <GradeDashboard /> */}
-       <RentalDashboard />
+       {/* <RentalDashboard /> */}
 
     </div>
   );
